@@ -181,7 +181,7 @@ void pattern11()
         // number
         for (int j = 0; j < i + 1; j++)
         {
-            cout << j + 1 ;
+            cout << j + 1;
         }
         // space
         for (int j = 2 * x - 2 * i - 1; j > 1; j--)
@@ -191,16 +191,70 @@ void pattern11()
         // number
         for (int j = i + 1; j > 0; j--)
         {
-            cout << j ;
+            cout << j;
         }
         cout << endl;
     }
 }
-
+void pattern12()
+{
+    int x;
+    cout << "enter a number: ";
+    cin >> x;
+    int num = 1;
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+            cout << num << " ";
+            num++;
+        }
+        cout << endl;
+    }
+}
+void pattern13()
+{
+    int x;
+    cout << "enter a number: ";
+    cin >> x;
+    for (int i = 0; i < x; i++)
+    {
+        for (char ch = 'A'; ch <= 'A' + i; ch++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+void pattern14(){
+    int x;
+    cout << "enter a number: ";
+    cin >> x;
+    for (int i=0;i<x;i++){
+        for (char ch='A';ch<='A'+x-i-1;ch++){
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+}
+void pattern15(){
+    int x;
+    cout << "enter a number: ";
+    cin >> x;
+    char c='A';
+    for (int i=0;i<x;i++){
+        for (char ch ='A';ch<='A'+i;ch++){
+            cout<<c<<" ";
+          
+        }
+            c++;
+        cout<<endl;
+    }
+}
 int main()
 {
     int pattern;
-    cout << "Enter pattern number (1 - 11): ";
+    cout << "Enter pattern number (1 - 15): ";
     cin >> pattern;
 
     switch (pattern)
@@ -258,6 +312,26 @@ int main()
     case 11:
     {
         pattern11();
+        break;
+    }
+    case 12:
+    {
+        pattern12();
+        break;
+    }
+    case 13:
+    {
+        pattern13();
+        break;
+    }
+    case 14:
+    {
+        pattern14();
+        break;
+    }
+    case 15:
+    {
+        pattern15();
         break;
     }
     default:
