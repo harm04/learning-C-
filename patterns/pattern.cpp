@@ -31,8 +31,8 @@ void pattern2()
         cout << endl;
     }
 }
-
-void pattern3(){
+void pattern3()
+{
     int x;
     cout << "Enter a number: ";
     cin >> x;
@@ -40,12 +40,13 @@ void pattern3(){
     {
         for (int j = 0; j < i + 1; j++)
         {
-            cout << j+1 << " ";
+            cout << j + 1 << " ";
         }
         cout << endl;
     }
 }
-void pattern4(){
+void pattern4()
+{
     int x;
     cout << "Enter a number: ";
     cin >> x;
@@ -53,30 +54,144 @@ void pattern4(){
     {
         for (int j = 0; j < i + 1; j++)
         {
-            cout << i+1 << " ";
+            cout << i + 1 << " ";
         }
         cout << endl;
     }
 }
-void pattern5(){
+void pattern5()
+{
     int x;
-    cout<<"Enter a number: ";
+    cout << "Enter a number: ";
     cin >> x;
-    for (int i = x; i >= 0;i--){
-        for (int j = 0; j < i;j++){
+    for (int i = x; i >= 0; i--)
+    {
+        for (int j = 0; j < i; j++)
+        {
             cout << " * ";
         }
         cout << endl;
     }
 }
-
-void pattern6(){
+void pattern6()
+{
     int x;
-    cout<<"Enter a number: ";
+    cout << "Enter a number: ";
     cin >> x;
-    for (int i = x; i >= 0;i--){
-        for (int j = 0; j < i;j++){
-            cout << j+1 << " ";
+    for (int i = x; i >= 0; i--)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << j + 1 << " ";
+        }
+        cout << endl;
+    }
+}
+void pattern7()
+{
+    int x;
+    cout << "Enter a number: ";
+    cin >> x;
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j <= x - i - 1; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < 2 * i + 1; j++)
+        {
+            cout << "*";
+        }
+        for (int j = 0; j <= x - i - 1; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+void pattern8()
+{
+    int x;
+    cout << "Enter a number: ";
+    cin >> x;
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 2 * x - 2 * i - 1; j > 0; j--)
+        {
+            cout << "*";
+        }
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+void pattern9()
+{
+    int x;
+    cout << "enter a number: ";
+    cin >> x;
+    for (int i = 0; i < 2 * x - 1; i++)
+    {
+        int stars = i + 1;
+        if (i >= x)
+        {
+            stars = 2 * x - i - 1;
+        }
+        for (int j = 0; j < stars; j++)
+        {
+
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+void pattern10()
+{
+    int x;
+    cout << "enter a number: ";
+    cin >> x;
+    int start = 1;
+    for (int i = 0; i < x; i++)
+    {
+        if (i % 2)
+            start = 1;
+        else
+            start = 0;
+        for (int j = 0; j <= i; j++)
+        {
+            cout << start << " ";
+            start = 1 - start;
+        }
+        cout << endl;
+    }
+}
+void pattern11()
+{
+    int x;
+    cout << "enter a number: ";
+    cin >> x;
+    for (int i = 0; i < x; i++)
+    {
+        // number
+        for (int j = 0; j < i + 1; j++)
+        {
+            cout << j + 1 ;
+        }
+        // space
+        for (int j = 2 * x - 2 * i - 1; j > 1; j--)
+        {
+            cout << " ";
+        }
+        // number
+        for (int j = i + 1; j > 0; j--)
+        {
+            cout << j ;
         }
         cout << endl;
     }
@@ -85,7 +200,7 @@ void pattern6(){
 int main()
 {
     int pattern;
-    cout << "Enter pattern number (1 - 6): ";
+    cout << "Enter pattern number (1 - 11): ";
     cin >> pattern;
 
     switch (pattern)
@@ -118,6 +233,31 @@ int main()
     case 6:
     {
         pattern6();
+        break;
+    }
+    case 7:
+    {
+        pattern7();
+        break;
+    }
+    case 8:
+    {
+        pattern8();
+        break;
+    }
+    case 9:
+    {
+        pattern9();
+        break;
+    }
+    case 10:
+    {
+        pattern10();
+        break;
+    }
+    case 11:
+    {
+        pattern11();
         break;
     }
     default:
